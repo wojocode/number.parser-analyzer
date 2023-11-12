@@ -17,8 +17,8 @@ public class Main {
         List<Integer> elements = new ArrayList<>();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
             String row;
+             Pattern pattern = Pattern.compile("(?<element>-?\\w+)\\s*");
             while ((row = bufferedReader.readLine()) != null) {
-                Pattern pattern = Pattern.compile("(?<element>-?\\w+)\\s*");
                 Matcher matcher = pattern.matcher(row);
                 while (matcher.find()) {
                     try {
