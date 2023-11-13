@@ -47,7 +47,7 @@ public class Main {
         return copy.get(0);
     }
 
-    public static List<Integer> getIndex(List<Integer> integers, int max) {
+    public static List<Integer> getIndexes(List<Integer> integers, int max) {
         List<Integer> indexes = new ArrayList<>();
         for (int i = 0; i < integers.size(); i++) {
             if (integers.get(i) == max) {
@@ -61,7 +61,7 @@ public class Main {
         elements.forEach(element -> System.out.print(element + " "));
         System.out.println();
         System.out.println(getMax(elements));
-        List<Integer> indexes = getIndex(elements, getMax(elements));
+        List<Integer> indexes = getIndexes(elements, getMax(elements));
         indexes.forEach(element -> System.out.print(element + " "));
     }
 }
